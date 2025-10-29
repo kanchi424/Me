@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kanchi Vedang | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Kanchi Vedang</h1>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Hello, I'm <span>Kanchi Vedang</span></h2>
+      <p>AI & Drone Developer | Software Engineer | Innovator</p>
+      <button onclick="scrollToSection('projects')">View My Work</button>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+      I'm passionate about Artificial Intelligence, Drones, and Software Engineering.
+      I’ve built intelligent aerial systems using Jetson Nano, Pixhawk, and CNNs for crack detection.
+      I love combining AI with real-world robotics and web applications.
+    </p>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="project-list">
+      <div class="project-card">
+        <h3>Autonomous Painting Drone</h3>
+        <p>Built a ZD850-based drone with Jetson Nano and computer vision for detecting unpainted surfaces.</p>
+      </div>
+      <div class="project-card">
+        <h3>Crack Detection AI</h3>
+        <p>Developed CNN to classify cracked/uncracked surfaces and integrated it with a drone camera feed.</p>
+      </div>
+      <div class="project-card">
+        <h3>Drone-Pixhawk Communication</h3>
+        <p>Python-based MAVLink communication for real-time data collection from UAVs.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>Python, TensorFlow, PyTorch</li>
+      <li>Computer Vision, Reinforcement Learning</li>
+      <li>HTML, CSS, JavaScript, React</li>
+      <li>MySQL, Django, Node.js</li>
+      <li>Drone Hardware, Pixhawk, Jetson Nano</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="section contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:kanchivedang@gmail.com">kanchivedang@gmail.com</a></p>
+    <p>LinkedIn: <a href="#">linkedin.com/in/kanchivedang</a></p>
+    <p>GitHub: <a href="#">github.com/kanchivedang</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Kanchi Vedang | Designed with ❤️ using HTML, CSS & JS</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
