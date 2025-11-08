@@ -1,113 +1,159 @@
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    background: #f9f9f9;
-    color: #333;
-    scroll-behavior: smooth;
-  }
-  
-  header {
-    background: #111;
-    color: white;
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-  }
-  
-  .navbar {
-    width: 90%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .nav-links a {
-    color: white;
-    text-decoration: none;
-    transition: 0.3s;
-  }
-  
-  .nav-links a:hover {
-    color: #00adb5;
-  }
-  
-  .hero {
-    height: 90vh;
-    background: linear-gradient(to right, #111, #222);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .hero button {
-    padding: 10px 20px;
-    border: none;
-    background: #00adb5;
-    color: white;
-    cursor: pointer;
-    border-radius: 8px;
-    font-size: 16px;
-    margin-top: 15px;
-    transition: 0.3s;
-  }
-  
-  .hero button:hover {
-    background: #00c2cc;
-  }
-  
-  .section {
-    width: 80%;
-    margin: 60px auto;
-    text-align: center;
-  }
-  
-  .project-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  .project-card {
-    background: white;
-    padding: 20px;
-    width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: 0.3s;
-  }
-  
-  .project-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .skills-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 15px;
-    list-style: none;
-    padding: 0;
-  }
-  
-  .contact a {
-    color: #00adb5;
-    text-decoration: none;
-  }
-  
-  footer {
-    background: #111;
-    color: white;
-    text-align: center;
-    padding: 15px;
-  }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #eaf6ff, #f6fffa);
+      min-height: 100vh;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeIn 1.5s ease;
+    }
+
+    header {
+      width: 100%;
+      padding: 1rem 2rem;
+      background: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(8px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-weight: 600;
+      color: #0077b6;
+      margin: 0;
+    }
+
+    header nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #0077b6;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    header nav a:hover {
+      color: #009688;
+    }
+
+    h2 {
+      margin-top: 2rem;
+      font-size: 2rem;
+      color: #005b8f;
+      text-align: center;
+      animation: slideDown 1s ease;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      width: 90%;
+      max-width: 1200px;
+      margin: 2rem auto 4rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.5rem;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeUp 1s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .card h3 {
+      color: #0077b6;
+      margin-top: 0;
+    }
+
+    .card p {
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 2rem;
+      text-decoration: none;
+      background: #0077b6;
+      color: white;
+      padding: 0.7rem 1.4rem;
+      border-radius: 30px;
+      transition: background 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background: #009688;
+    }
+
+    footer {
+      width: 100%;
+      background: #f0faff;
+      padding: 1rem;
+      text-align: center;
+      color: #333;
+      font-size: 0.9rem;
+      border-top: 1px solid #d7efff;
+    }
+
+    footer a {
+      color: #0077b6;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.2rem;
+      }
+      .projects {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Kanchi Veda</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="prominent-works.html" style="font-weight:600;">Prominent Works</a>
+      <a href="mailto:vedang@example.com">Contact</a>
+    </nav>
+  </header>
+
   
